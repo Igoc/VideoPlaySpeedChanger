@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="shortcut icon" type="image/png" href="/static/favicon/favicon.png"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"/>
+
+        <title>Video Play Speed Changer</title>
+    </head>
+    <body>
+        <header class="header-container">
+            <div class="header-wrapper">
+                <span class="header-title">Video Play Speed Changer</span>
+            </div>
+        </header>
+
+        <div class="content-container">
+            <div class="content-wrapper">
+                <div class="content-blank-space"></div>
+
+                <div class="content-vertical-box">
+                    <div class="content-title">Change Video Play Speed</div>
+                    <div class="content-subtitle">Speed up or slow down your video</div>
+                </div>
+
+                <div class="content-blank-space"></div>
+
+                <div id="upload-box" class="content-vertical-box">
+                    <div class="content-horizontal-box">
+                        <input type="radio" name="video-play-speed-radio-button" id="video-play-speed-radio-button-1" class="content-video-play-speed-radio-button"/>
+                        <label for="video-play-speed-radio-button-1" class="content-subbutton">× 0.75</label>
+
+                        <input type="radio" checked="true" name="video-play-speed-radio-button" id="video-play-speed-radio-button-2" class="content-video-play-speed-radio-button"/>
+                        <label for="video-play-speed-radio-button-2" class="content-subbutton">× 1.25</label>
+
+                        <input type="radio" name="video-play-speed-radio-button" id="video-play-speed-radio-button-3" class="content-video-play-speed-radio-button"/>
+                        <label for="video-play-speed-radio-button-3" class="content-subbutton">× 1.50</label>
+                    </div>
+
+                    <div class="content-half-blank-space"></div>
+
+                    <div class="content-vertical-box">
+                        <input type="file" accept="video/*" id="video-file" class="content-video-file"/>
+                        <label for="video-file" class="content-button">Choose Video</label>
+                    </div>
+
+                    <div class="content-half-blank-space"></div>
+
+                    <div class="content-vertical-box">
+                        <div class="content-description">This button automatically starts transfer and change</div>
+                    </div>
+                </div>
+
+                <div id="progress-box" class="content-vertical-box" style="display: none">
+                    <progress max="100" value="0" id="progress" class="content-progress"></progress>
+
+                    <div class="content-half-blank-space"></div>
+
+                    <div id="cancel-button" class="content-subbutton">CANCEL</div>
+                </div>
+
+                <div id="download-box" class="content-vertical-box" style="display: none">
+                    <a id="download-button" class="content-button">Download</a>
+
+                    <div class="content-half-blank-space"></div>
+
+                    <div id="return-button" class="content-subbutton">RETURN</div>
+                </div>
+
+                <div class="content-double-blank-space"></div>
+
+                <div class="content-horizontal-box">
+                    <div class="content-vertical-box" style="margin-left: 17.5%">
+                        <img src="/static/icon/change-speed.png"/>
+
+                        <div class="content-half-blank-space"></div>
+
+                        <div class="content-description">Change video play speed quickly</div>
+                    </div>
+
+                    <div class="content-vertical-box">
+                        <img src="/static/icon/download-count.png"/>
+
+                        <div class="content-half-blank-space"></div>
+
+                        <div class="content-description">Automatically delete file after download</div>
+                    </div>
+
+                    <div class="content-vertical-box" style="margin-right: 17.5%">
+                        <img src="/static/icon/download-retention-time.png"/>
+
+                        <div class="content-half-blank-space"></div>
+
+                        <div class="content-description">Automatically delete file after 30 mins</div>
+                    </div>
+                </div>
+
+                <div class="content-double-blank-space"></div>
+                <div class="content-half-blank-space"></div>
+
+                <div class="content-vertical-box">
+                    <div class="content-demo-title">Online Demo</div>
+
+                    <div class="content-half-blank-space"></div>
+
+                    <video src="/static/video/demo.mp4" muted="true" loop="true" autoplay="true" id="demo-video" class="content-demo-video"></video>
+
+                    <div class="content-half-blank-space"></div>
+
+                    <div class="content-horizontal-box">
+                        <input type="radio" name="demo-video-play-speed-radio-button" id="demo-video-play-speed-radio-button-1" class="content-demo-video-play-speed-radio-button"/>
+                        <label for="demo-video-play-speed-radio-button-1" class="content-subbutton">× 0.75</label>
+
+                        <input type="radio" checked="true" name="demo-video-play-speed-radio-button" id="demo-video-play-speed-radio-button-2" class="content-demo-video-play-speed-radio-button"/>
+                        <label for="demo-video-play-speed-radio-button-2" class="content-subbutton">× 1.00</label>
+
+                        <input type="radio" name="demo-video-play-speed-radio-button" id="demo-video-play-speed-radio-button-3" class="content-demo-video-play-speed-radio-button"/>
+                        <label for="demo-video-play-speed-radio-button-3" class="content-subbutton">× 1.25</label>
+
+                        <input type="radio" name="demo-video-play-speed-radio-button" id="demo-video-play-speed-radio-button-4" class="content-demo-video-play-speed-radio-button"/>
+                        <label for="demo-video-play-speed-radio-button-4" class="content-subbutton">× 1.50</label>
+                    </div>
+                </div>
+
+                <div class="content-blank-space"></div>
+            </div>
+        </div>
+    </body>
+</html>
