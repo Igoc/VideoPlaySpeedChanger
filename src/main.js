@@ -152,8 +152,6 @@ downloadButton.onclick = () => {
     uploadBox.style.display   = 'flex';
     progressBox.style.display = 'none';
     downloadBox.style.display = 'none';
-
-    downloadButton.href = '';
 };
 
 /* ADD RETURN BUTTON EVENT LISTENER */
@@ -162,8 +160,6 @@ returnButton.onclick = () => {
     uploadBox.style.display   = 'flex';
     progressBox.style.display = 'none';
     downloadBox.style.display = 'none';
-
-    downloadButton.href = '';
 };
 
 /* ADD DEMO VIDEO PLAY SPEED RADIO BUTTONS EVENT LISTENER */
